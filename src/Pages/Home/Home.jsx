@@ -1,4 +1,4 @@
-import { motion, useTransform,useScroll, transform } from "motion/react"
+import { motion, useTransform, useScroll, transform } from "framer-motion"
 import Navbar from "../../Components/Navbar/Navbar"
 import Styles from "./Home.module.css"
 import { useEffect, useRef, useState } from "react"
@@ -40,20 +40,32 @@ let {widthLimitReach} = useWidthContext()
 // video time
 const videoTime = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
+  // Handle loading animations when component mounts
+  useEffect(() => {
+    // First animation after 1.3 seconds
+    const timer1 = setTimeout(() => {
+      setLoad2(true);
+    }, 1300);
+  
+  // Second animation after 3.1 seconds
+  const timer2 = setTimeout(() => {
+    setLoad(true);
+  }, 3100);
+  
+  // Cleanup timers on component unmount
+  return () => {
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+  };
+}, []);
+
 useEffect(() => {
   const video = VideoRef.current;
 
   // pause video
   video.pause();
 
-  window.onload = () => {
-    setTimeout(() => {
-       setLoad(true);
-    }, 3100);
-    setTimeout(() => {
-      setLoad2(true)
-    }, 1300);
-  };
+  // Remove window.onload and use useEffect instead
 
   
 

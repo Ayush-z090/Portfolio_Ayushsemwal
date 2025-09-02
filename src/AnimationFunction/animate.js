@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useScroll, useTransform, useSpring, transform, animate } from "motion/react";
+import { useScroll, useTransform, useSpring, transform, animate } from "framer-motion";
 
 function AnimationDisplacement(trnsObj,initial_Val,Final_val =0,condition=true){
     
@@ -12,7 +12,6 @@ function AnimationDisplacement(trnsObj,initial_Val,Final_val =0,condition=true){
 
 function AnimationDisplacmentPart2(trnsObj,initial_Val,Final_val=0,condition=true){
 
-    console.log(Object.keys(initial_Val))
     if (Object.keys(initial_Val).includes("left")) 
         {
             return{
@@ -52,13 +51,11 @@ function OnHoverAnimation(){
                 transition:{duration:".1"}
             },
         onHoverStart:()=>{
-            console.log("cnc")
             document.getElementById("root").style.filter = "blur(2px)";
             document.getElementById("root").style.position = "relative"
             
         },
         onHoverEnd:()=>{
-            console.log("cnc")
             document.getElementById("root").style.filter = "blur(0)";
             document.getElementById("root").style.zIndex = "1";
         }

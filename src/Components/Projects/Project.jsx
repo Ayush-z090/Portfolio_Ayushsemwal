@@ -109,7 +109,7 @@ function ProjectCard({ image, bodyText ,link,name}) {
     return (
         <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
             <motion.div 
-                onClick={(e)=>  console.log(e.target)}
+                onClick={(e)=>  {}}
                 style={{ 
                     rotateY,
                     transformStyle: 'preserve-3d',

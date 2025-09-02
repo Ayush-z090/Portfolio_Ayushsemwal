@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import Styles from "./Navbar.module.css"
 import { AnimationDisplacement, AnimationOpacity,OnHoverAnimation } from "../../AnimationFunction/animate"
 import { useState,useEffect } from "react"

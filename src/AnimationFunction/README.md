@@ -47,7 +47,7 @@ For parallax scrolling effects.
 ### Simple Fade In Animation
 
 ```jsx
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ScrollAnimation } from "./animate";
 
 function MyComponent() {
