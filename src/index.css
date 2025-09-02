@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+:root body{
+  background-color: var(--color-bg-);
+  text-shadow: 1px 3px 15px ;
+  
+}
+
+
+:root body::-webkit-scrollbar{
+  display:  none;
+}
+
+:root{
+  --color-bg-:black;
+  --color-text-00-:#ffffff;
+  --color-text-01-:#d4d8de;
+  --color-text-03-:#f3a314;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #root{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+

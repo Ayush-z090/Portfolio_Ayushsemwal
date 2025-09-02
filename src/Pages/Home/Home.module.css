@@ -1,0 +1,176 @@
+
+
+.background_effect_{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: -1;
+}
+
+.background_effect_ video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: var(--videoFilter,brightness(0.6) blur(.5px));
+}
+
+.Body_container{
+    width: 100vw;
+    height: 100vh;
+    color: var(--color-text-00-);
+    font-family:"Montserrat" ,sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.second_Heading{
+    padding: 2rem 8vw;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.main_container {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 10vw;
+    display: flex;
+    gap: 6rem;
+    letter-spacing: -.8rem;
+    align-items: end;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+.Click_detailsHeading{
+    text-align: center;
+    display: flex;
+    position: relative;
+    height: 3.9rem;
+}
+
+.Click_detailsHeading .EmptyBody{
+    margin: 2rem 0 0 0;
+    padding: 1rem;
+    border: 1px solid var(--color-text-00-);
+    border-radius: 2rem;
+    font-weight: 500;
+    color: transparent;
+    position: absolute;
+}
+
+.Click_detailsHeading .TextBody{
+    margin: 2rem 0 0 0;
+    padding: 1rem;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+}
+
+/* ------------------------ animation  ------------------------ */ 
+
+
+.main_container > h1:first-child{
+    position: relative;
+    
+}
+
+.main_container > h1:first-child::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(0px);
+    z-index: 1;
+    pointer-events: none !important; 
+}
+
+.main_container:has(h1:first-child:hover)  {
+    transform:scale(1.1);
+}
+.main_container > h1:first-child:hover::after  {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scale(3,2);
+    backdrop-filter: blur(1.1px);
+    
+}
+
+
+.main_container > h1:first-child::after,
+.main_container > h1:first-child::after,
+.main_container:has(h1),
+.Body_container
+{
+
+    transition: all .5s ease-in-out , transfrom .02s linear;
+
+}
+
+/*---------------------------------- aniamtion pseudo elemnt----------------------------- */
+
+.background_effect_::before{
+    content: var(--beforeContent,"");
+    position: absolute;
+    top: 0;
+    height: var(--beforeHeight,0vh);
+    width: 100%;
+    background-color: var(--color-bg-);
+    box-shadow: var(--beforeBox_shadow,0px 20px 30px 5px);
+    z-index: 3;
+}
+.background_effect_::after{
+    content:  var(--afterContent,"");
+    position: absolute;
+    bottom: 0;
+    height:  var(--afterHeight,0vh);
+    width: 100%;
+    background-color: var(--color-bg-);
+    box-shadow:var(--afterBox_shadow, 0px -10px 30px 5px);
+}
+
+
+/* ---------------media query -------------- */
+
+
+@media (min-width:750px){
+    .main_container h1:last-child{
+    display: var(--h1-display,default);
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
+    font-size: 13vw;
+    color: var(--color-text-03-);
+    text-transform: capitalize;
+    letter-spacing: -.2rem;
+    rotate: -8deg;
+}
+
+}
+
+@media (max-width:750px){
+
+    .main_container h1{
+        font-size: 1.5rem;
+        letter-spacing: -2px;
+        box-sizing: border-box;
+        padding: 1rem .5rem;
+        text-align: left;
+        line-height: 1.2;
+    }
+    
+}
+

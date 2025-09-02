@@ -1,0 +1,96 @@
+.Footer_root{
+    width: 100%;
+    max-width: 100%;
+    padding: 3rem 8vw 1.2rem 8vw;
+    background: rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(255,255,255,.15);
+    color: var(--color-text-00-);
+    margin-top: 4rem;
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+.Footer_inner{
+    display: grid;
+    grid-template-columns: 1.2fr .8fr .8fr 1fr;
+    gap: 2rem;
+}
+
+.Brand_name{
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+    margin: 0;
+}
+.Brand_tag{
+    opacity: .8;
+    margin-top: .4rem;
+}
+
+.Links_block h4,
+.Contact_block h4{
+    margin: 0 0 .6rem 0;
+    font-weight: 700;
+}
+.Links_block ul,
+.Contact_block ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: .4rem;
+}
+.Links_block a,
+.Contact_block a{
+    color: var(--color-text-00-);
+    text-decoration: none;
+    opacity: .9;
+}
+.Links_block a:hover,
+.Contact_block a:hover{
+    text-decoration: underline;
+}
+
+.CTA_block{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    align-items: flex-end;
+    justify-content: center;
+}
+.CTA_btn{
+    border: 1px solid var(--color-text-00-);
+    padding: .6rem 1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--color-text-00-);
+}
+.CTA_btn:hover{
+    background: var(--color-text-00-);
+    color: var(--color-bg-);
+}
+
+.Footer_bottom{
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 1rem;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px){
+    .Footer_inner{
+        grid-template-columns: 1fr 1fr;
+    }
+    .CTA_block{
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 560px){
+    .Footer_inner{
+        grid-template-columns: 1fr;
+    }
+}
+
+

@@ -1,0 +1,110 @@
+.About_container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    color: var(--color-text-00-);
+    text-transform: capitalize;
+    font-family:"Anton",sans-serif;
+    padding: 1rem 0;
+    justify-content: space-evenly;
+}
+
+.Left_Container{
+    width: 60%;
+    box-sizing: border-box;
+    padding: 0 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.Left_Container h1{
+    font-size: 9vw;
+    letter-spacing: 0rem;
+    font-weight: 400;
+    line-height: 1;
+    width: 100%;
+    position: relative;
+}
+
+.Left_Container p{
+    font-size: 1vw;
+    line-height: 1.6;
+
+}
+
+
+.Right_Container{
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.ImgContainer{
+    width: 90%;
+    height:70%;
+    position: relative;
+    border: 1px solid var(--color-text-00-);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.ImgContainer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* ------------------------ animation  ------------------------ */ 
+
+.Left_Container{
+    position: relative;
+ 
+}
+
+.Left_Container::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(0px);
+    z-index: -1;
+}
+
+/* Removed hover scale to avoid conflicts with scroll transform */
+
+.Left_Container,
+.Left_Container::after
+{
+    transition: backdrop-filter 2s linear;
+
+}
+
+
+@media (min-width: 750px) {
+
+    .Left_Container h1::after{
+    content: "Ayush Semwal";
+    font-family: "dancing Script";
+    position: absolute;
+    text-transform: capitalize;
+    transform: translate3d(-16vw,2vw , 0);
+    rotate: -6deg;
+    color: var(--color-text-03-);
+    font-size: 4vw;
+    letter-spacing: 0rem;
+    width: 30vw;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.621);
+    font-weight: 900;
+}
+
+}
