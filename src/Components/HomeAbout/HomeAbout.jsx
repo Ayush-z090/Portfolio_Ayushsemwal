@@ -28,9 +28,9 @@ export default function HomeAbout(){
     let p_0= <p
 style={widthLimitReach ?
     {fontSize:".78rem",
-        margin:"1rem 0",
+        margin:".5rem 0",
         lineHeight:"1.2"}:{}}
-> a passionate developer with a strong foundation in JavaScript, Python, C, and C#. I focus on creating interactive, user-friendly front-end interfaces and also explore backend development with Python. I'm currently diving into Machine Learning to build intelligent, adaptive web applications that bridge AI with modern solutions.
+> Ayush 👋 —I am a passionate developer with a strong foundation in JavaScript, Python, C, and C#. I focus on creating interactive, user-friendly front-end interfaces and also explore backend development with Python. I'm currently diving into Machine Learning to build intelligent, adaptive web applications that bridge AI with modern solutions.
 </p>
 
     const left = useScrollScrub(

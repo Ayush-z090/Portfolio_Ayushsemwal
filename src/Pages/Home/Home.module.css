@@ -78,6 +78,29 @@
     right: 0;
 }
 
+.loader{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    flex-direction: column;
+    font-size: clamp(1rem,1.5vw,4rem);
+    letter-spacing: .9px;
+    font-family: "anton", sans-serif;
+    color: var(--color-text-00-);
+    opacity: var(--loader-opacity,0);
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+.loader h1{
+    font-size: clamp(1rem,3vw,20rem);
+}
+
 /* ------------------------ animation  ------------------------ */ 
 
 
@@ -120,6 +143,9 @@
     transition: all .5s ease-in-out , transfrom .02s linear;
 
 }
+
+
+
 
 /*---------------------------------- aniamtion pseudo elemnt----------------------------- */
 

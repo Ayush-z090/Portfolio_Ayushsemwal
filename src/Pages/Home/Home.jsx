@@ -11,6 +11,7 @@ import Footer from "../../Components/Footer/Footer"
 import VidEffect from "../../assets/Video/vid2.mp4"
 import { useWidthContext } from "../../App"
 import "../../index.css"
+import PortfolioLogo from "../../assets/logo.png"
 
 
     let DisPlaec_transition = {
@@ -36,28 +37,39 @@ let { scrollYProgress } = useScroll();
 let VideoRef = useRef(null);
 let [isWinLoad_timeStamp1, setLoad] = useState(false);
 let [isWinLoad_timeStamp2, setLoad2] = useState(false);
+let [isWinLoad_timeStamp0,setLoad3] = useState(false)
 let {widthLimitReach} = useWidthContext()
 // video time
 const videoTime = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  // Handle loading animations when component mounts
-  useEffect(() => {
-    // First animation after 1.3 seconds
-    const timer1 = setTimeout(() => {
-      setLoad2(true);
-    }, 1300);
-  
-  // Second animation after 3.1 seconds
-  const timer2 = setTimeout(() => {
-    setLoad(true);
-  }, 3100);
-  
-  // Cleanup timers on component unmount
-  return () => {
-    clearTimeout(timer1);
-    clearTimeout(timer2);
-  };
+useEffect(() => {
+  function runTimers() {
+    console.log("enter2");
+    const timer1 = setTimeout(() => setLoad2(true), 1800);
+    const timer2 = setTimeout(() => setLoad(true), 3000);
+    const timer0 = setTimeout(() => {
+      setLoad3(true)
+
+    }, 800);
+
+    return () => {
+      clearTimeout(timer0)
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }
+
+  if (document.readyState === "complete") {
+    // Page is already fully loaded
+    return runTimers();
+  } else {
+    window.addEventListener("load", runTimers);
+    return () => {
+      window.removeEventListener("load", runTimers);
+    };
+  }
 }, []);
+
 
 useEffect(() => {
   const video = VideoRef.current;
@@ -100,6 +112,7 @@ useEffect(() => {
 
     return(
         <>
+        <Loader winload={isWinLoad_timeStamp0} winload2 ={isWinLoad_timeStamp1}/>
         <motion.div 
         initial={
           {"--beforeHeight":"50vh",
@@ -245,3 +258,27 @@ function Main_body({isWinLoad,width_Limit}){
 
 
                  
+function Loader({winload,winload2}){
+  return(
+    <>
+      <motion.div
+      initial={
+        {
+          opacity:0,
+          zIndex:1
+        }
+      }
+      animate={winload ? {opacity:0} : {opacity:1}}
+      transition={{duration: 1, ease:"easeInOut"}
+      
+    }
+      style={{display:winload2 ? "none":undefined}}
+      className={Styles.loader}>
+        <img
+        style={{height:"clamp(2rem, 11vw, 25rem)"}}
+        src={PortfolioLogo} alt="#" />
+        <h1>Portfolio</h1>
+      </motion.div>
+    </>
+  )
+}
