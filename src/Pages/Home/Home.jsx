@@ -139,7 +139,7 @@ useEffect(() => {
                "--videoFilter" : `brightness(${widthLimitReach ? ".34" : ".6"}) blur(${widthLimitReach ? "0px" : "0.3px"})`
             }}
             ref={VideoRef}
-            src={VidEffect} autoPlay ></motion.video>
+            src={VidEffect} autoPlay muted ></motion.video>
         </motion.div>
         <div 
         style={widthLimitReach ? 
@@ -231,10 +231,7 @@ function Main_body({isWinLoad,width_Limit}){
             {...AnimationOpacity(Opace_transition,isWinLoad)}
             className={Styles.main_container}>
                  <motion.h1
-                 style={!width_Limit ? 
-                  {
-                    
-                  }:{}}
+
                     {...AnimationDisplacement(
                       DisPlaec_transition,
                       -4,

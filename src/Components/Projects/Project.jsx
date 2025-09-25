@@ -3,17 +3,17 @@ import { useEffect, useRef, useState } from "react"
 import { motion, useMotionValue, animate } from 'framer-motion';
 import { useScrollScrub } from "../../AnimationFunction/animate"
 import { useWidthContext } from "../../App"
-import YtBg from "../../assets/yt_bg.jpg"
+import VinortBg from "../../assets/Vinort.jpg"
 import TaskBg from "../../assets/TaskBg.jpg"
 import S_attendanceBg from "../../assets/S_attendanceBg.jpg"
 
 let ProjectArr = [ 
     {
         no:1,
-        img:YtBg,
-        body:"I created a YouTube Clone using React to practice component-based design and API integration. The project includes core features like video browsing, search functionality, and responsive layouts, helping me strengthen my skills in React hooks, state management, and dynamic rendering while focusing on clean, user-friendly design.",
-        link:"",
-        name:"Clone App"
+        img:VinortBg,
+        body:"I built 'VINORT', a YouTube-style web app with AI-driven search and interactive UI. Users can search videos, request guides, navigate via links, or discuss video content through a single prompt. This experimental project demonstrates prompt-based search and smooth AI–UI interaction, though Cloud Render and YouTube transcript limits restrict all AI video-query functionality. Backend is private; contact via email for details.",
+        link:"https://ayush-z090.github.io/Vinort/",
+        name:"vinort"
     }
     ,
     {
