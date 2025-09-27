@@ -1,6 +1,6 @@
 .Skills_Info_Container{
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     color: var(--color-text-00-);
     box-sizing: border-box;
     padding: 5rem 0;

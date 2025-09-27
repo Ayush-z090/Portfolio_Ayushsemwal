@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-color: black;
     z-index: -1;
 }
@@ -23,7 +23,7 @@
 
 .Body_container{
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     color: var(--color-text-00-);
     font-family:"Montserrat" ,sans-serif;
     font-weight: 400;
@@ -80,7 +80,7 @@
 
 .loader{
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,7 +156,7 @@
     content: var(--beforeContent,"");
     position: absolute;
     top: 0;
-    height: var(--beforeHeight,0vh);
+    height: var(--beforeHeight,0dvh);
     width: 100%;
     background-color: var(--color-bg-);
     box-shadow: var(--beforeBox_shadow,0px 20px 30px 5px);
@@ -166,7 +166,7 @@
     content:  var(--afterContent,"");
     position: absolute;
     bottom: 0;
-    height:  var(--afterHeight,0vh);
+    height:  var(--afterHeight,0dvh);
     width: 100%;
     background-color: var(--color-bg-);
     box-shadow:var(--afterBox_shadow, 0px -10px 30px 5px);

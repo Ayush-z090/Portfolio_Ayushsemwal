@@ -26,7 +26,7 @@ let ProjectArr = [
     {
         no:3,
         img:S_attendanceBg,
-        body:"I developed a Student Attendance System that streamlines the process of marking attendance by using barcode scanning. Instead of relying on manual entry, students can quickly scan their unique barcode to register attendance, making the system both accurate and efficient. This project demonstrates my ability to integrate real-world functionality with web applications, focusing on automation, reliability, and ease of use.",
+        body:"I developed a Student Attendance System that streamlines the process of marking attendance by using barcode scanning. Instead of relying on manual entry, students can quickly scan their unique barcode to register attendance, making the system both accurate and efficient. This project demonstrates my ability to integrate real-world functionality with web applications, focusing on automation, reliability, and ease of use. Note this project isnt hosted yet",
         link:"",
         name:"Attendance System"
     }
@@ -37,7 +37,7 @@ export default function Project(){
 
     return(
         <>
-            <div className={Styles.Project_container}>
+            <div className={Styles.Project_container} id="project">
                 <h1>Projects</h1>
                 <div className={Styles.Card_Container}>
                     {ProjectArr.map((data, idx)=> (

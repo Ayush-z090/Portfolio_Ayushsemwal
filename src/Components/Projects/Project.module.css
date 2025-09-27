@@ -1,6 +1,6 @@
 .Project_container{
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     color:var(--color-text-00-);
     padding: 2rem 0 4rem 0vw;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
 
 .Project_Box{
     cursor: pointer;
-    height: 50vh;
+    height: 50dvh;
     width: clamp(20rem,calc(100vw / 4),34rem);
     border: 1px solid black;
     display: flex;

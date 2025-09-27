@@ -15,7 +15,7 @@ let p_1 = (<>
                     Beyond front-end work, I have explored Python development for backend and continue to expand my skills in web functionality. I enjoy building features that enhance usability and make applications more dynamic. My curiosity drives me to continuously learn and experiment with new tools and techniques to ensure I can deliver modern, efficient solutions.
                 </p>
                 <p>
-                    Currently, I am diving into Machine Learning (ML) and its integration with web applications. My goal is to bridge the gap between websites, apps, and artificial intelligence, enabling smarter, more adaptive platforms. With this knowledge, I aim to create solutions that are not only interactive but also intelligent, paving the way for innovative projects that merge programming with AI-driven insights.
+                    Currently, I am diving into Machine Learning (ML) and exploring the integration btw Ui and AI. My goal is to bridge the gap between websites, apps, and artificial intelligence, enabling smarter, more adaptive platforms. With this knowledge, I aim to create solutions that are not only interactive but also intelligent, paving the way for innovative projects that merge programming with AI-driven insights.
                 </p>
 </>)
 
@@ -30,7 +30,7 @@ style={widthLimitReach ?
     {fontSize:".78rem",
         margin:".5rem 0",
         lineHeight:"1.2"}:{}}
-> Ayush 👋 —I am a passionate developer with a strong foundation in JavaScript, Python, C, and C#. I focus on creating interactive, user-friendly front-end interfaces and also explore backend development with Python. I'm currently diving into Machine Learning to build intelligent, adaptive web applications that bridge AI with modern solutions.
+> Ayush 👋 —I am a passionate developer with a strong foundation in JavaScript, Python, C, and C#. I focus on creating interactive, user-friendly front-end interfaces and also explore backend development with Python. I'm currently diving into Machine Learning and also want to build intelligent, adaptive web applications that bridge AI with modern solutions.
 </p>
 
     const left = useScrollScrub(

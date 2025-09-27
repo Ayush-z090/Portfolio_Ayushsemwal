@@ -115,14 +115,14 @@ useEffect(() => {
         <Loader winload={isWinLoad_timeStamp0} winload2 ={isWinLoad_timeStamp1}/>
         <motion.div 
         initial={
-          {"--beforeHeight":"50vh",
-            "--afterHeight":"50vh",
+          {"--beforeHeight":"50dvh",
+            "--afterHeight":"50dvh",
             "--beforeBox_shadow":"0 0 0 0",
             "--afterBox_shadow" : "0 0 0 0",
             }}
         animate={isWinLoad_timeStamp2 ? 
-          {"--beforeHeight":widthLimitReach ? "1vh":"5vh",
-            "--afterHeight": widthLimitReach ? "1vh" : "3vh",
+          {"--beforeHeight":widthLimitReach ? "1dvh":"5dvh",
+            "--afterHeight": widthLimitReach ? "1dvh" : "3dvh",
             "--beforeBox_shadow":"0px 10px 30px 5px",
             "--afterBox_shadow" : "0px -10px 30px 5px",
             transition:{duration:widthLimitReach ?3 :4}}

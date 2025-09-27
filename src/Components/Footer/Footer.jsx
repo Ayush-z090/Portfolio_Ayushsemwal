@@ -1,5 +1,4 @@
 import Styles from "./Footer.module.css"
-import StylesMobile from "./Footer.mobile.module.css"
 export default function Footer(){
     return(
         <>
@@ -14,7 +13,7 @@ export default function Footer(){
                         <ul>
                             <li><a href="#Home">Home</a></li>
                             <li><a href="#About">About</a></li>
-                            <li><a href="#Projects">Projects</a></li>
+                            <li><a href="#project">Projects</a></li>
                         </ul>
                     </div>
                     <div className={Styles.Contact_block}>
@@ -22,7 +21,7 @@ export default function Footer(){
                         <ul>
                             <li><a href="mailto:ayushsemwal26@gmail.com">ayushsemwal26@gmail.com</a></li>
                             <li><a href="https://github.com/Ayush-z090" target="_blank" rel="noreferrer">GitHub</a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                            <li><a href="https://linkedin.com/in/ayush-semwal-3032b8387" target="_blank" rel="noreerrerf">LinkedIn</a></li>
                         </ul>
                     </div>
                     <div className={Styles.CTA_block}>

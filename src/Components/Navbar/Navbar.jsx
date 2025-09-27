@@ -25,7 +25,7 @@ export default function Navbar({D_transition,O_transition,animatecondtion}){
             <motion.nav   
             {...AnimationOpacity(O_transition,animatecondtion)}
             className={Styles.Navbar_container}
-            style={widthLimitReach ? {boxSizing:"border-box",padding:"0 1rem 0 0"} :{navSty,...{}}}
+            style={widthLimitReach ? {boxSizing:"border-box",padding:"0 1rem"} :{navSty,...{}}}
             >
                 <motion.h3
                 style={widthLimitReach ? 

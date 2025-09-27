@@ -1,6 +1,6 @@
 .About_container{
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     color: var(--color-text-00-);
     text-transform: capitalize;
